@@ -3,498 +3,413 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ванны и Кабины — Style</title>
+<title>Ванны и Кабины — Black</title>
 <meta name="description" content="«Ванны и Кабины» — официальный дилер RGW, Abber, AvaCan и Alex Baitler в Ростове-на-Дону. Таганрогская ул., 138, корп. 2, этаж 1.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='none' stroke='%23ffffff' stroke-width='4'/%3E%3Cpath d='M18 36h28v3a8 8 0 0 1-8 8H26a8 8 0 0 1-8-8v-3z' fill='%23ffffff'/%3E%3Cpath d='M21 36V22a5 5 0 0 1 10 0' fill='none' stroke='%23ffffff' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000'/%3E%3Cpath d='M10 34h44v4a10 10 0 0 1-10 10H20a10 10 0 0 1-10-10v-4z' fill='%23f5f5f7'/%3E%3Cpath d='M14 34V16a6 6 0 0 1 12 0' fill='none' stroke='%23f5f5f7' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#101216;
-    --bg2:#181a20;
-    --bg3:#1f222a;
-    --hair:rgba(222,210,241,.075);
-    --hair2:rgba(222,210,241,.14);
+    --black:#000000;
+    --carbon:#111111;
+    --obsidian:#1d1d1f;
+    --smoke:#333336;
+    --graphite:#424245;
+    --ash:#86868b;
+    --silk:#f5f5f7;
     --white:#ffffff;
-    --lav:rgba(209,219,255,.7);
-    --lav2:rgba(209,219,255,.45);
-    --violet:#8b7bd8;
-    --green:#3ed598;
-    --ember:#e0764a;
-    --font:'Inter','neueMontreal',-apple-system,sans-serif;
-    --serif:'Prata','kalice',serif;
-    --ease:cubic-bezier(0,0,.2,1);
+    --blue:#0071e3;
+    --r-card:28px;
+    --disp:'Inter Tight','Inter',-apple-system,'Segoe UI',sans-serif;
+    --body:'Inter',-apple-system,'Segoe UI',sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
-    font-family:var(--font);
-    background:var(--bg);color:var(--white);
-    font-size:16px;font-weight:400;line-height:1.55;letter-spacing:-.01em;
+    font-family:var(--body);
+    background:var(--black);color:var(--silk);
+    font-size:17px;line-height:1.47;letter-spacing:-.022em;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
-  :focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:8px}
+  :focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
-  section{padding:72px 0;scroll-margin-top:130px}
 
-  .rv{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
-  .rv.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+  .wrap{max-width:1440px;margin:0 auto;padding:0 max(24px,4vw)}
+  .narrow{max-width:980px;margin:0 auto;padding:0 24px}
 
-  /* ---------- header ---------- */
-  .hdr{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(16,18,22,.85);
-    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  /* ---------- glass nav ---------- */
+  .nav{
+    position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:100;
+    display:flex;align-items:center;gap:26px;
+    background:rgba(66,66,69,.72);
+    -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+    border-radius:980px;
+    padding:10px 12px 10px 22px;
+    white-space:nowrap;
   }
-  .hdr .crumbs{
-    display:flex;align-items:center;gap:14px;
-    padding:14px 22px 10px;max-width:1060px;margin:0 auto;
+  .nav .brand{font-family:var(--disp);font-weight:600;font-size:13px;letter-spacing:-.01em;color:var(--white)}
+  .nav a.lnk{font-size:12px;line-height:1.33;letter-spacing:-.01em;color:rgba(255,255,255,.8);transition:color .2s}
+  .nav a.lnk:hover{color:var(--white)}
+  .nav .cta{
+    font-size:12px;font-weight:500;color:var(--white);
+    background:var(--blue);border-radius:980px;
+    padding:8px 16px;
+    transition:background .2s;
   }
-  .logo-ring{
-    width:44px;height:44px;border-radius:50%;flex:none;
-    border:3px solid var(--white);
-    display:grid;place-items:center;
-  }
-  .logo-ring svg{width:22px;height:22px}
-  .crumbs .sep{color:var(--lav2);font-size:20px}
-  .crumbs .a{font-size:19px;color:var(--lav);letter-spacing:-.01em}
-  .crumbs .a:hover{color:var(--white)}
-  .crumbs .b{font-family:var(--serif);font-size:21px;letter-spacing:0}
-  .crumbs .call{
-    margin-left:auto;
-    font-size:14px;font-weight:600;color:var(--white);
-    background:var(--bg2);border:1px solid var(--hair2);
-    border-radius:999px;padding:9px 18px;
-    transition:background .15s var(--ease),border-color .15s var(--ease);
-  }
-  .crumbs .call:hover{background:var(--bg3);border-color:rgba(222,210,241,.3)}
-  .tabs{
-    display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;
-    padding:8px 22px 14px;max-width:1060px;margin:0 auto;
-  }
-  .tabs::-webkit-scrollbar{display:none}
-  .tab{
-    flex:none;
-    font-size:14px;font-weight:500;color:var(--lav);
-    background:var(--bg);border:1px solid var(--hair);
-    border-radius:999px;padding:11px 20px;
-    transition:color .15s var(--ease),background-color .15s var(--ease),border-color .15s var(--ease);
-    cursor:pointer;white-space:nowrap;
-  }
-  .tab:hover{color:var(--white);border-color:var(--hair2)}
-  .tab.on{background:var(--bg2);color:var(--white);font-weight:600;border-color:var(--hair2)}
+  .nav .cta:hover{background:#0077ed}
   @media(max-width:640px){
-    .crumbs .a,.crumbs .sep{display:none}
+    .nav{gap:16px;padding:9px 10px 9px 18px}
+    .nav a.lnk{display:none}
   }
 
   /* ---------- hero ---------- */
-  .hero{padding:170px 0 30px}
+  .hero{height:190vh;position:relative}
+  .hero-sticky{
+    position:sticky;top:0;height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+    overflow:hidden;
+  }
+  .hero-copy{text-align:center;padding-top:14vh;position:relative;z-index:2}
+  .eyebrow{
+    font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ash);
+  }
   .hero h1{
-    font-family:var(--serif);
-    font-size:clamp(34px,5.4vw,56px);font-weight:400;line-height:1.12;letter-spacing:0;
+    font-family:var(--disp);
+    font-size:clamp(44px,7vw,80px);
+    font-weight:600;line-height:1.05;letter-spacing:-.015em;
+    color:var(--silk);
+    margin-top:14px;
   }
-  .hero .metaphor{
-    margin-top:16px;max-width:640px;
-    font-size:19px;line-height:1.5;color:var(--lav);
+  .hero .sub{
+    font-size:21px;font-weight:500;line-height:1.19;color:var(--ash);
+    margin-top:16px;
   }
-  .hero .src{
-    margin-top:18px;display:inline-block;
-    font-size:14px;color:var(--lav2);
-  }
-  .hero .src b{color:var(--lav);font-weight:500}
-
-  /* ---------- section label ---------- */
-  .slabel{
-    font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--lav2);margin-bottom:18px;
-  }
-  h2.stitle{
-    font-family:var(--serif);font-weight:400;
-    font-size:clamp(24px,3vw,32px);letter-spacing:0;line-height:1.2;
-    margin-bottom:26px;
-  }
-
-  /* ---------- preview cards ---------- */
-  .prev{margin-bottom:44px}
-  .prev-card{
-    background:var(--white);border-radius:22px;overflow:hidden;
-    transition:transform .35s var(--ease);
-  }
-  .prev-card:hover{transform:translateY(-4px)}
-  .prev-card img{width:100%;aspect-ratio:16/8.4;object-fit:cover}
-
-  /* ---------- live tour previews ---------- */
-  .lp{
-    position:relative;display:block;
-    background:var(--bg2);border:1px solid var(--hair);
-    border-radius:22px;overflow:hidden;aspect-ratio:16/10;
-    transition:transform .35s var(--ease),border-color .2s var(--ease),box-shadow .35s var(--ease);
-  }
-  .lp:hover{transform:translateY(-4px) scale(1.008);border-color:var(--hair2);box-shadow:0 24px 60px rgba(0,0,0,.45)}
-  .lp .shim{
-    position:absolute;inset:0;z-index:1;
-    background:linear-gradient(110deg,#171a21 32%,#222635 48%,#171a21 64%);
-    background-size:220% 100%;
-    animation:shimmer 1.5s linear infinite;
-    transition:opacity .5s var(--ease);
-  }
-  .lp.ready .shim{opacity:0;pointer-events:none}
-  @keyframes shimmer{0%{background-position:190% 0}100%{background-position:-30% 0}}
-  .lp .film{
-    position:absolute;top:0;left:0;transform-origin:0 0;z-index:0;
-  }
-  .lp iframe{
-    width:1200px;height:2700px;border:0;display:block;background:#fff;
-    pointer-events:none;
-    animation:tour 26s linear infinite alternate;
-    animation-play-state:paused;
+  .hero-img{
+    position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    width:min(1600px,110vw);
     will-change:transform;
   }
-  .lp.play iframe{animation-play-state:running}
-  @keyframes tour{
-    0%,7%{transform:translateY(0)}
-    93%,100%{transform:translateY(calc(-2700px + var(--vh, 750px)))}
+  .hero-img img,.hero-img video{width:100%;height:auto;display:block}
+  .hero-chip{
+    position:absolute;right:max(24px,4vw);bottom:32px;z-index:3;
+    display:flex;align-items:center;gap:8px;
+    background:rgba(66,66,69,.72);
+    -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+    border-radius:980px;padding:10px 18px;
+    font-size:12px;color:rgba(255,255,255,.85);
   }
-  .lp .tag{
-    position:absolute;right:14px;top:14px;z-index:2;
-    font-size:12px;font-weight:600;color:var(--white);
-    background:rgba(16,18,22,.72);border:1px solid var(--hair2);
-    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
-    border-radius:999px;padding:6px 13px;
-  }
-  @media(prefers-reduced-motion:reduce){.lp iframe,.lp .shim{animation:none}}
-  .prev-meta{display:flex;align-items:center;gap:14px;margin-top:16px}
-  .prev-ico{
-    width:48px;height:48px;border-radius:13px;flex:none;
-    background:var(--bg2);border:1px solid var(--hair);
-    display:grid;place-items:center;overflow:hidden;
-  }
-  .prev-ico img{width:100%;height:100%;object-fit:cover}
-  .prev-meta b{display:block;font-size:21px;font-weight:600;letter-spacing:-.01em}
-  .prev-meta span{display:block;font-size:15px;color:var(--violet);opacity:.85}
+  .hero-chip b{color:var(--white);font-weight:600}
+  .hero-chip .star{color:#f5b423}
 
-  /* ---------- swatch cards (contacts) ---------- */
-  .cat{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--lav2);margin:26px 0 12px}
-  .swgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-  @media(max-width:720px){.swgrid{grid-template-columns:1fr}}
-  .sw{
-    display:flex;align-items:center;gap:14px;
-    background:var(--bg2);border:1px solid var(--hair);
-    border-radius:16px;padding:14px 16px;
-    transition:border-color .15s var(--ease),background .15s var(--ease);
+  /* ---------- manifest ---------- */
+  .manifest{padding:19vh 0;background:var(--black)}
+  .manifest p{
+    font-family:var(--disp);
+    font-size:clamp(26px,3.6vw,44px);
+    font-weight:600;line-height:1.18;letter-spacing:-.009em;
+    color:var(--silk);
   }
-  .sw:hover{border-color:var(--hair2);background:var(--bg3)}
-  .sw .chip{width:44px;height:44px;border-radius:12px;flex:none;border:1px solid var(--hair2)}
-  .sw .txt{min-width:0}
-  .sw b{display:block;font-size:15.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .sw span{display:block;font-size:13px;color:var(--lav);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .sw .copy{
-    margin-left:auto;flex:none;position:relative;
-    font-size:13px;font-weight:500;color:var(--lav);
-    background:transparent;border:1px solid var(--hair);
-    border-radius:999px;padding:7px 14px;cursor:pointer;
-    font-family:var(--font);
-    transition:color .15s var(--ease),border-color .15s var(--ease),background .15s var(--ease);
-  }
-  .sw .copy:hover{color:var(--white);border-color:var(--hair2);background:var(--bg)}
-  .sw .copy.done{color:var(--green);border-color:rgba(62,213,152,.4)}
+  .manifest p .w{color:var(--smoke);transition:color .3s linear}
+  .manifest p .w.lit{color:var(--silk)}
+  .manifest .brands-note{margin-top:34px;font-size:17px;color:var(--ash);max-width:560px}
 
-  /* ---------- guarantee scale ---------- */
-  .scale-row{
-    display:flex;align-items:baseline;justify-content:space-between;gap:18px;
-    padding:20px 0;border-bottom:1px solid var(--hair);
+  /* ---------- brand scenes ---------- */
+  .scene{height:160vh;position:relative}
+  .scene-sticky{
+    position:sticky;top:0;height:100vh;overflow:hidden;
+    display:flex;align-items:flex-end;
   }
-  .scale-row:first-of-type{border-top:1px solid var(--hair)}
-  .scale-row .name{font-weight:600;letter-spacing:-.01em;line-height:1.05}
-  .scale-row .meta{flex:none;font-size:13px;color:var(--lav2);text-align:right}
-  .scale-row .meta b{display:block;color:var(--lav);font-weight:500;font-size:14px}
-  .s1 .name{font-size:clamp(34px,5vw,52px)}
-  .s2 .name{font-size:clamp(29px,4.2vw,44px)}
-  .s3 .name{font-size:clamp(24px,3.4vw,36px)}
-  .s4 .name{font-size:clamp(20px,2.8vw,28px)}
-  .scale-note{margin-top:14px;font-size:13px;color:var(--lav2)}
-
-  /* ---------- do / don't ---------- */
-  .dd{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-  @media(max-width:760px){.dd{grid-template-columns:1fr}}
-  .dd h3{font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
-  .dd .do h3{color:var(--green)}
-  .dd .dont h3{color:var(--ember)}
-  .dd li{
-    list-style:none;position:relative;
-    padding:12px 0 12px 30px;border-bottom:1px solid var(--hair);
-    font-size:15.5px;color:rgba(255,255,255,.88);
+  .scene-img{
+    position:absolute;inset:0;
+    display:flex;align-items:center;justify-content:center;
+    will-change:transform,opacity;
   }
-  .dd li::before{position:absolute;left:2px;top:11px;font-weight:600}
-  .dd .do li::before{content:"+";color:var(--green)}
-  .dd .dont li::before{content:"–";color:var(--ember)}
-
-  /* ---------- brands (more like this) ---------- */
-  .mlt{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  @media(max-width:720px){.mlt{grid-template-columns:1fr}}
-  .mcard{
-    display:flex;align-items:center;gap:16px;
-    background:var(--bg2);border:1px solid var(--hair);
-    border-radius:18px;padding:16px 18px;
-    transition:transform .25s var(--ease),border-color .15s var(--ease),background .15s var(--ease);
+  .scene-img img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .scene-sticky::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:42%;
+    background:linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0));
+    pointer-events:none;z-index:1;
   }
-  .mcard:hover{transform:translateY(-3px);border-color:var(--hair2);background:var(--bg3)}
-  .mcard .thumb{width:74px;height:74px;border-radius:14px;flex:none;overflow:hidden;background:var(--white)}
-  .mcard .thumb img{width:100%;height:100%;object-fit:cover}
-  .mcard b{display:block;font-size:18px;font-weight:600}
-  .mcard span{display:block;font-size:14px;color:var(--violet);opacity:.85;margin-top:2px}
-  .mcard .arr{margin-left:auto;color:var(--lav2);font-size:18px;transition:transform .2s var(--ease),color .2s var(--ease)}
-  .mcard:hover .arr{transform:translateX(4px);color:var(--white)}
-
-  /* ---------- map card ---------- */
-  .map-prev{background:var(--white);border-radius:22px;overflow:hidden;min-height:400px;display:flex}
-  .map-prev iframe{width:100%;height:100%;min-height:400px;border:0}
-
-  /* ---------- rating ---------- */
-  .rate{
-    display:flex;align-items:center;gap:20px;flex-wrap:wrap;
-    background:var(--bg2);border:1px solid var(--hair);border-radius:18px;
-    padding:22px 26px;margin-top:14px;
+  .scene-body{
+    position:relative;z-index:2;width:100%;
+    display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+    padding:0 max(24px,4vw) 48px;
   }
-  .rate .num{font-family:var(--serif);font-size:40px;line-height:1}
-  .rate .stars{color:#f5b423;letter-spacing:2px}
-  .rate p{font-size:14px;color:var(--lav)}
-  .rate a{
-    margin-left:auto;
-    font-size:14px;font-weight:600;color:var(--white);
-    background:var(--bg3);border:1px solid var(--hair2);border-radius:999px;padding:10px 18px;
-    transition:background .15s var(--ease);
+  .scene-copy{max-width:520px}
+  .scene-copy .eyebrow{margin-bottom:10px}
+  .scene-copy h2{
+    font-family:var(--disp);
+    font-size:clamp(34px,4.4vw,56px);
+    font-weight:600;line-height:1.07;letter-spacing:-.005em;color:var(--white);
   }
-  .rate a:hover{background:#262a33}
-  @media(max-width:680px){.rate a{margin-left:0}}
-
-  /* ---------- footer ---------- */
-  footer{border-top:1px solid var(--hair);padding:34px 0 44px;margin-top:40px}
-  footer .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--lav2)}
-  footer a:hover{color:var(--white)}
-  footer .links{display:flex;gap:18px;flex-wrap:wrap}
-
-  /* toast */
-  .toast{
-    position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(16px);
-    background:var(--bg3);border:1px solid var(--hair2);border-radius:999px;
-    padding:10px 20px;font-size:14px;color:var(--white);
-    opacity:0;pointer-events:none;z-index:200;
-    transition:opacity .25s var(--ease),transform .25s var(--ease);
+  .scene-copy p{margin-top:12px;font-size:17px;color:var(--ash);max-width:46ch}
+  .scene-copy .more{
+    display:inline-block;margin-top:16px;
+    font-size:17px;font-weight:500;color:#2997ff;
   }
-  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-  .toast .ok{color:var(--green);margin-right:6px}
+  .scene-copy .more:hover{text-decoration:underline}
+  .scene-tag{
+    flex:none;
+    background:rgba(66,66,69,.72);
+    -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+    border-radius:980px;padding:10px 18px;
+    font-size:12px;color:rgba(255,255,255,.85);
+  }
+  @media(max-width:760px){
+    .scene-body{flex-direction:column;align-items:flex-start;gap:14px;padding-bottom:38px}
+  }
+
+  /* ---------- white bands ---------- */
+  .band{background:var(--silk);color:var(--obsidian);padding:110px 0}
+  .band .eyebrow{color:#6e6e73}
+  .band h2{
+    font-family:var(--disp);
+    font-size:clamp(34px,4.4vw,56px);
+    font-weight:600;line-height:1.07;letter-spacing:-.005em;
+    color:var(--obsidian);margin-top:10px;
+  }
+  .band .lead{margin-top:14px;font-size:21px;font-weight:500;line-height:1.3;color:#6e6e73;max-width:640px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+  @media(max-width:860px){.cards{grid-template-columns:1fr}}
+  .card{
+    background:var(--white);border-radius:var(--r-card);overflow:hidden;
+  }
+  .card img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+  .card .pad{padding:22px 26px 26px}
+  .card b{display:block;font-family:var(--disp);font-weight:600;font-size:21px;line-height:1.19;letter-spacing:-.01em}
+  .card span{display:block;margin-top:6px;font-size:14px;line-height:1.4;color:#6e6e73}
+  .band .rate{
+    margin-top:44px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+    font-size:17px;color:#6e6e73;
+  }
+  .band .rate b{font-family:var(--disp);font-size:44px;font-weight:600;color:var(--obsidian);letter-spacing:-.01em}
+  .band .rate .stars{color:#f5b423;font-size:19px;letter-spacing:2px}
+  .band a.link{color:var(--blue);font-weight:500}
+  .band a.link:hover{text-decoration:underline}
+
+  /* ---------- interlude ---------- */
+  .inter{position:relative;height:110vh;overflow:hidden;display:grid;place-items:center}
+  .inter img,.inter video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .inter .inner{position:relative;z-index:2;text-align:center;padding:0 24px}
+  .inter h2{
+    font-family:var(--disp);
+    font-size:clamp(30px,4vw,48px);font-weight:600;line-height:1.1;letter-spacing:-.005em;color:var(--white);
+    text-shadow:0 2px 30px rgba(0,0,0,.6);
+  }
+  .inter p{margin-top:12px;font-size:17px;color:rgba(245,245,247,.75)}
+
+  /* ---------- find band ---------- */
+  .findgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;margin-top:52px;align-items:stretch}
+  @media(max-width:860px){.findgrid{grid-template-columns:1fr}}
+  .map-card{border-radius:var(--r-card);overflow:hidden;min-height:380px;display:flex;background:#e8e8ed}
+  .map-card iframe{width:100%;height:100%;min-height:380px;border:0}
+  .find-col{display:flex;flex-direction:column;gap:20px}
+  .find-col .card img{aspect-ratio:16/9.5}
+  .facts{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px;
+  }
+  @media(max-width:860px){.facts{grid-template-columns:1fr}}
+  .fact{background:var(--white);border-radius:var(--r-card);padding:24px 26px}
+  .fact .k{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#6e6e73}
+  .fact .v{margin-top:8px;font-family:var(--disp);font-weight:600;font-size:21px;line-height:1.25;letter-spacing:-.01em}
+  .fact .v small{display:block;font-family:var(--body);font-weight:400;font-size:14px;color:#6e6e73;margin-top:4px;letter-spacing:-.01em}
+  .fact .v .wknd{color:#b04a2f}
+
+  /* ---------- finale ---------- */
+  .finale{padding:150px 0 60px;text-align:center;background:var(--black)}
+  .finale h2{
+    font-family:var(--disp);
+    font-size:clamp(44px,6.4vw,72px);font-weight:600;line-height:1.05;letter-spacing:-.012em;color:var(--silk);
+  }
+  .finale .addr{margin-top:16px;font-size:21px;font-weight:500;color:var(--ash)}
+  .phones{margin-top:44px;display:flex;flex-direction:column;gap:8px}
+  .phones a{
+    font-family:var(--disp);font-weight:600;
+    font-size:clamp(26px,3.6vw,40px);letter-spacing:-.005em;color:var(--white);
+    transition:color .2s;
+  }
+  .phones a:hover{color:#2997ff}
+  .finale-row{margin-top:40px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+  .gpill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(66,66,69,.72);
+    -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+    border-radius:980px;padding:12px 22px;
+    font-size:14px;font-weight:500;color:var(--white);
+    transition:background .2s;
+  }
+  .gpill:hover{background:rgba(86,86,89,.8)}
+  .finale .maps-link{font-size:14px;font-weight:500;color:#2997ff;align-self:center;padding:12px 8px}
+  .finale .maps-link:hover{text-decoration:underline}
+  footer{
+    margin-top:100px;padding:28px 0;border-top:1px solid var(--carbon);
+    font-size:12px;line-height:1.33;color:var(--ash);
+  }
+  footer .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  footer a:hover{color:var(--silk)}
+  footer .links{display:flex;gap:16px;flex-wrap:wrap}
+
+  /* reveal helpers (JS enhances; visible by default) */
+  .fx{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<header class="hdr">
-  <div class="crumbs">
-    <span class="logo-ring">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-2z"/>
-        <path d="M5 12V6a2.5 2.5 0 0 1 5 0"/>
-      </svg>
-    </span>
-    <span class="sep">/</span><a class="a" href="#top">Магазин</a>
-    <span class="sep">/</span><span class="b">Ванны и Кабины</span>
-    <a class="call" href="tel:+79185548744">Позвонить</a>
+<nav class="nav" aria-label="Навигация">
+  <span class="brand">Ванны и Кабины</span>
+  <a class="lnk" href="#brands">Бренды</a>
+  <a class="lnk" href="#showroom">Шоурум</a>
+  <a class="lnk" href="#find">Как найти</a>
+  <a class="cta" href="tel:+79185548744">Позвонить</a>
+</nav>
+
+<section class="hero" id="top">
+  <div class="hero-sticky">
+    <div class="hero-copy fx" id="heroCopy">
+      <div class="eyebrow">Официальный дилер · Ростов-на-Дону</div>
+      <h1>Ванны и кабины.</h1>
+      <p class="sub">Напрямую от четырёх производителей.</p>
+    </div>
+    <div class="hero-img" id="heroImg"><video src="assets/743ca923f501.mp4" poster="assets/5fd62a0ae829.jpg" autoplay muted loop playsinline preload="none" aria-label="Тропический душ, струи воды в темноте"></video></div>
+    <div class="hero-chip"><span class="star">★</span><b>4,4</b><span>· 38 оценок на Яндекс Картах</span></div>
   </div>
-  <nav class="tabs" aria-label="Разделы">
-    <a class="tab on" href="#top" data-t="top">Витрина</a>
-    <a class="tab" href="#brands" data-t="brands">Бренды</a>
-    <a class="tab" href="#contacts" data-t="contacts">Контакты · Copy</a>
-    <a class="tab" href="#scale" data-t="scale">Гарантии</a>
-    <a class="tab" href="#dodont" data-t="dodont">Do / Don't</a>
-    <a class="tab" href="#find" data-t="find">Карта</a>
-  </nav>
-</header>
+</section>
 
-<main id="top">
-  <div class="wrap hero">
-    <h1 class="rv">Ванны и Кабины</h1>
-    <p class="metaphor rv" style="--d:.08s">Тёплый шоурум на Таганрогской, где четыре завода живут под одной крышей — заводская гарантия шёпотом, дилерские цены вслух, и один синий поток воды сквозь весь каталог.</p>
-    <div class="src rv" style="--d:.14s">Официальный дилер: <b>RGW · Abber · AvaCan · Alex Baitler</b> · Ростов-на-Дону</div>
+<section class="manifest">
+  <div class="narrow">
+    <p id="manifestText">Мы — официальные дилеры RGW, Abber, AvaCan и Alex Baitler. Без посредников: заводская гарантия, дилерские цены и шоурум, где всё можно потрогать руками.</p>
+    <div class="brands-note">Таганрогская ул., 138, корп. 2 · этаж 1 · Пн–Пт 9:00–17:00</div>
   </div>
+</section>
 
-  <section style="padding-top:26px">
-    <div class="wrap">
-      <div class="prev rv">
-        <a class="lp" href="editorial.html" target="_blank" data-tour>
-          <span class="shim"></span><span class="tag">live</span>
-          <span class="film"><iframe data-src="editorial.html" title="Тёплая версия сайта" loading="lazy" scrolling="no" tabindex="-1"></iframe></span>
-        </a>
-        <div class="prev-meta">
-          <span class="prev-ico"><img decoding="async" fetchpriority="high" src="assets/46f8d3656f3d.jpg" alt=""></span>
-          <div><b>Editorial</b><span>тёплая бумага и бронза — магазин по-человечески…</span></div>
-        </div>
+<div id="brands"></div>
+
+<section class="scene">
+  <div class="scene-sticky">
+    <div class="scene-img"><img decoding="async" fetchpriority="high" src="assets/ac25b0649d4c.jpg" alt="Душевой уголок RGW с чёрным профилем на чёрном фоне"></div>
+    <div class="scene-body">
+      <div class="scene-copy">
+        <div class="eyebrow">01 · Россия · с 1997</div>
+        <h2>RGW.</h2>
+        <p>Душевые ограждения и двери из закалённого стекла. Собственное производство в Подмосковье.</p>
+        <a class="more" href="https://rgw-magazin.ru/" target="_blank" rel="noopener">Каталог RGW ›</a>
       </div>
-      <div class="prev rv">
-        <a class="lp" href="black.html" target="_blank" data-tour>
-          <span class="shim"></span><span class="tag">live</span>
-          <span class="film"><iframe data-src="black.html" title="Чёрная версия сайта" loading="lazy" scrolling="no" tabindex="-1"></iframe></span>
-        </a>
-        <div class="prev-meta">
-          <span class="prev-ico"><img loading="lazy" decoding="async" src="assets/f5adeef90954.jpg" alt=""></span>
-          <div><b>Black</b><span>чёрный театр со светящимся продуктом…</span></div>
-        </div>
+      <div class="scene-tag">Гарантия до 4 лет</div>
+    </div>
+  </div>
+</section>
+
+<section class="scene">
+  <div class="scene-sticky">
+    <div class="scene-img"><img loading="lazy" decoding="async" src="assets/df13558618ad.jpg" alt="Белая отдельностоящая ванна в луче света на чёрном фоне"></div>
+    <div class="scene-body">
+      <div class="scene-copy">
+        <div class="eyebrow">02 · с 2005</div>
+        <h2>Abber.</h2>
+        <p>Ванны из акрила и искусственного камня, душевые уголки, смесители. Продукция сертифицирована в РФ.</p>
+        <a class="more" href="https://abber-shop.ru/" target="_blank" rel="noopener">Каталог Abber ›</a>
       </div>
-      <div class="prev rv">
-        <a class="lp" href="giallo.html" target="_blank" data-tour>
-          <span class="shim"></span><span class="tag">live</span>
-          <span class="film"><iframe data-src="giallo.html" title="Жёлтая версия сайта" loading="lazy" scrolling="no" tabindex="-1"></iframe></span>
-        </a>
-        <div class="prev-meta">
-          <span class="prev-ico"><img loading="lazy" decoding="async" src="assets/984f7242f1c9.jpg" alt=""></span>
-          <div><b>Giallo</b><span>монохромное кино, пробитое единственным жёлтым…</span></div>
-        </div>
+      <div class="scene-tag">Заводская гарантия</div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="showroom">
+  <div class="wrap">
+    <div class="eyebrow">Шоурум · Таганрогская, 138</div>
+    <h2>Приезжайте посмотреть вживую.</h2>
+    <p class="lead">Кабины собраны и подключены, ванны и мебель расставлены по залу. Выбирать проще, чем по картинкам.</p>
+    <div class="cards">
+      <div class="card"><img loading="lazy" decoding="async" src="assets/7dd975f8b3b0.jpg" alt="Зал магазина с подсветкой товаров"><div class="pad"><b>Зал брендов</b><span>Кабины, ванны, мебель и смесители — всё включено и работает.</span></div></div>
+      <div class="card"><img loading="lazy" decoding="async" src="assets/ebd959e74102.jpg" alt="Тумба с раковиной и смесителем матовой бронзы"><div class="pad"><b>Мебель для ванных</b><span>Тумбы, зеркала с подсветкой, пеналы — под любой размер.</span></div></div>
+      <div class="card"><img loading="lazy" decoding="async" src="assets/412ff4d1d4f0.jpg" alt="Дизайнерская рифлёная раковина"><div class="pad"><b>Дизайнерские позиции</b><span>Цветные раковины и нестандартные решения — в наличии.</span></div></div>
+    </div>
+    <div class="rate">
+      <b>4,4</b><span class="stars">★★★★<span style="opacity:.35">★</span></span>
+      <span>38 оценок и 19 отзывов на Яндекс Картах.<br>Карточка подтверждена владельцем. <a class="link" href="https://yandex.ru/maps/org/vanny_i_kabiny/191562904159/" target="_blank" rel="noopener">Читать отзывы ›</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="scene">
+  <div class="scene-sticky">
+    <div class="scene-img"><img loading="lazy" decoding="async" src="assets/ad255072db78.jpg" alt="Душевая кабина AvaCan на чёрном фоне"></div>
+    <div class="scene-body">
+      <div class="scene-copy">
+        <div class="eyebrow">03 · Сборка изнутри</div>
+        <h2>AvaCan.</h2>
+        <p>Кабины с запатентованной сборкой изнутри — встают вплотную к стенам и помещаются даже в маленький санузел.</p>
+        <a class="more" href="https://avacan.tech/" target="_blank" rel="noopener">Каталог AvaCan ›</a>
       </div>
-      <div class="prev rv">
-        <a class="lp" href="espana.html" target="_blank" data-tour>
-          <span class="shim"></span><span class="tag">live</span>
-          <span class="film"><iframe data-src="espana.html" title="Светлая версия сайта" loading="lazy" scrolling="no" tabindex="-1"></iframe></span>
-        </a>
-        <div class="prev-meta">
-          <span class="prev-ico"><img loading="lazy" decoding="async" src="assets/65c8a49bc2f8.jpg" alt=""></span>
-          <div><b>España</b><span>собор белого света с шепчущими заголовками…</span></div>
-        </div>
+      <div class="scene-tag">Гарантия 8 лет</div>
+    </div>
+  </div>
+</section>
+
+<section class="scene">
+  <div class="scene-sticky">
+    <div class="scene-img"><img loading="lazy" decoding="async" src="assets/811aa8797c25.jpg" alt="Душевое ограждение Alex Baitler с хромированным профилем на чёрном фоне"></div>
+    <div class="scene-body">
+      <div class="scene-copy">
+        <div class="eyebrow">04 · NEOSAN Group</div>
+        <h2>Alex Baitler.</h2>
+        <p>Бренд с немецкими корнями. С 2017 года — собственное производство в Подмосковье, сертифицировано по ISO 9001.</p>
+        <a class="more" href="http://www.alexbaitler.ru/" target="_blank" rel="noopener">Каталог Alex Baitler ›</a>
       </div>
-      <div class="prev rv">
-        <a class="lp" href="porcelain.html" target="_blank" data-tour>
-          <span class="shim"></span><span class="tag">live</span>
-          <span class="film"><iframe data-src="porcelain.html" title="Фарфоровая версия сайта" loading="lazy" scrolling="no" tabindex="-1"></iframe></span>
-        </a>
-        <div class="prev-meta">
-          <span class="prev-ico"><img loading="lazy" decoding="async" src="assets/46f8d3656f3d.jpg" alt=""></span>
-          <div><b>Porcelain</b><span>скандинавская галерея на фарфоре…</span></div>
-        </div>
+      <div class="scene-tag">Гарантия до 7 лет</div>
+    </div>
+  </div>
+</section>
+
+<section class="inter">
+  <video src="assets/1e829e37d9db.mp4" poster="assets/d0edd85e9847.jpg" autoplay muted loop playsinline preload="none" aria-label="Макро: капли воды сползают по стеклу душевого ограждения"></video>
+  <div class="inner">
+    <h2>Оригинал. С заводской гарантией.</h2>
+    <p>До 8 лет — в зависимости от бренда. Все документы — при покупке.</p>
+  </div>
+</section>
+
+<section class="band" id="find">
+  <div class="wrap">
+    <div class="eyebrow">Контакты</div>
+    <h2>Как нас найти.</h2>
+    <p class="lead">Ориентир — торговый комплекс на Таганрогской, 138. Вход с улицы, дверь под вывеской «Ванны и кабины», первый этаж.</p>
+    <div class="findgrid">
+      <div class="map-card">
+        <iframe title="Ванны и Кабины на карте" loading="lazy"
+          src="https://yandex.ru/map-widget/v1/?ll=39.631934%2C47.258224&mode=search&oid=191562904159&ol=biz&z=17"></iframe>
       </div>
-      <div class="prev rv">
-        <a class="lp" href="rosso.html" target="_blank" data-tour>
-          <span class="shim"></span><span class="tag">live</span>
-          <span class="film"><iframe data-src="rosso.html" title="Красная версия сайта" loading="lazy" scrolling="no" tabindex="-1"></iframe></span>
-        </a>
-        <div class="prev-meta">
-          <span class="prev-ico"><img loading="lazy" decoding="async" src="assets/f5adeef90954.jpg" alt=""></span>
-          <div><b>Rosso</b><span>чёрные пустоты и сигнальный красный на hover…</span></div>
-        </div>
+      <div class="find-col">
+        <div class="card"><img loading="lazy" decoding="async" src="assets/3e89ac311d65.jpg" alt="Здание торгового комплекса на Таганрогской, 138"><div class="pad"><b>Здание комплекса</b><span>Баннеры «Металлопрокат · Кровля» на фасаде — это оно.</span></div></div>
+        <div class="card"><img loading="lazy" decoding="async" src="assets/9c221c6e96f6.jpg" alt="Входная дверь под вывеской «Ванны и кабины»"><div class="pad"><b>Наш вход</b><span>Прямо с улицы, парковка вдоль здания бесплатная.</span></div></div>
       </div>
     </div>
-  </section>
-
-  <section id="brands">
-    <div class="wrap">
-      <div class="slabel rv">More like this</div>
-      <h2 class="stitle rv" style="--d:.06s">Четыре бренда — официально</h2>
-      <div class="mlt">
-        <a class="mcard rv" href="https://rgw-magazin.ru/" target="_blank" rel="noopener">
-          <span class="thumb"><img loading="lazy" decoding="async" src="assets/850c956fb7fe.jpg" alt=""></span>
-          <div><b>RGW</b><span>стекло 6 мм · с 1997 · гарантия до 4 лет</span></div>
-          <span class="arr">›</span>
-        </a>
-        <a class="mcard rv" style="--d:.06s" href="https://abber-shop.ru/" target="_blank" rel="noopener">
-          <span class="thumb"><img loading="lazy" decoding="async" src="assets/54be09976e23.jpg" alt=""></span>
-          <div><b>Abber</b><span>ванны из акрила и камня · с 2005</span></div>
-          <span class="arr">›</span>
-        </a>
-        <a class="mcard rv" style="--d:.12s" href="https://avacan.tech/" target="_blank" rel="noopener">
-          <span class="thumb"><img loading="lazy" decoding="async" src="assets/f757f6e648ae.jpg" alt=""></span>
-          <div><b>AvaCan</b><span>кабины со сборкой изнутри · гарантия 8 лет</span></div>
-          <span class="arr">›</span>
-        </a>
-        <a class="mcard rv" style="--d:.18s" href="http://www.alexbaitler.ru/" target="_blank" rel="noopener">
-          <span class="thumb"><img loading="lazy" decoding="async" src="assets/63419b599e0d.jpg" alt=""></span>
-          <div><b>Alex Baitler</b><span>кабины и ограждения · NEOSAN Group</span></div>
-          <span class="arr">›</span>
-        </a>
-      </div>
+    <div class="facts">
+      <div class="fact"><div class="k">Часы работы</div><div class="v">Пн–Пт · 9:00–17:00<small class="wknd">Сб–Вс — выходной</small></div></div>
+      <div class="fact"><div class="k">Адрес</div><div class="v">Таганрогская, 138, к. 2<small>этаж 1 · рядом остановка «Воинская часть»</small></div></div>
+      <div class="fact"><div class="k">Мессенджер</div><div class="v">MAX<small><a class="link" href="https://max.ru/+7909412-41-24" target="_blank" rel="noopener">Написать нам ›</a></small></div></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contacts">
-    <div class="wrap">
-      <div class="slabel rv">Palette</div>
-      <h2 class="stitle rv" style="--d:.06s">Контакты — нажмите Copy</h2>
-      <div class="cat rv">Связь</div>
-      <div class="swgrid">
-        <div class="sw rv"><span class="chip" style="background:linear-gradient(135deg,#2e6f8f,#14415a)"></span><div class="txt"><b>+7 (918) 554-87-44</b><span>основной · Пн–Пт 9:00–17:00</span></div><button class="copy" data-copy="+79185548744">Copy</button></div>
-        <div class="sw rv" style="--d:.05s"><span class="chip" style="background:linear-gradient(135deg,#3c7d63,#1d4a38)"></span><div class="txt"><b>+7 (909) 412-41-24</b><span>второй номер · привязан MAX</span></div><button class="copy" data-copy="+79094124124">Copy</button></div>
-        <div class="sw rv" style="--d:.1s"><span class="chip" style="background:linear-gradient(135deg,#8a4be0,#4e7df7)"></span><div class="txt"><b>Мессенджер MAX</b><span>max.ru/+7909412-41-24</span></div><button class="copy" data-copy="https://max.ru/+7909412-41-24">Copy</button></div>
-        <div class="sw rv" style="--d:.15s"><span class="chip" style="background:linear-gradient(135deg,#b3652f,#7a3f16)"></span><div class="txt"><b>Таганрогская ул., 138, корп. 2</b><span>этаж 1 · Ростов-на-Дону</span></div><button class="copy" data-copy="Ростов-на-Дону, Таганрогская ул., 138, корп. 2, этаж 1">Copy</button></div>
-      </div>
-      <div class="cat rv">Отделки в наличии</div>
-      <div class="swgrid">
-        <div class="sw rv"><span class="chip" style="background:#8db6d2"></span><div class="txt"><b>«Небо» — рифлёный пьедестал</b><span>дизайнерская раковина</span></div><button class="copy" data-copy="Раковина-пьедестал, голубая, рифлёная — в наличии">Copy</button></div>
-        <div class="sw rv" style="--d:.05s"><span class="chip" style="background:#a93226"></span><div class="txt"><b>«Рубин» — красное стекло</b><span>с латунным смесителем</span></div><button class="copy" data-copy="Раковина из красного стекла — в наличии">Copy</button></div>
-      </div>
+<section class="finale">
+  <div class="narrow">
+    <h2>Приезжайте.</h2>
+    <p class="addr">Таганрогская ул., 138, корп. 2 · этаж 1 · Ростов-на-Дону</p>
+    <div class="phones">
+      <a href="tel:+79185548744">+7 (918) 554-87-44</a>
+      <a href="tel:+79094124124">+7 (909) 412-41-24</a>
     </div>
-  </section>
-
-  <section id="scale">
-    <div class="wrap">
-      <div class="slabel rv">Type scale</div>
-      <h2 class="stitle rv" style="--d:.06s">Шкала гарантий</h2>
-      <div class="scale-row s1 rv"><span class="name">AvaCan — 8 лет</span><span class="meta"><b>display</b>заводская гарантия</span></div>
-      <div class="scale-row s2 rv" style="--d:.05s"><span class="name">Alex Baitler — до 7 лет</span><span class="meta"><b>heading</b>ISO 9001</span></div>
-      <div class="scale-row s3 rv" style="--d:.1s"><span class="name">RGW — до 4 лет</span><span class="meta"><b>subheading</b>закалённое стекло</span></div>
-      <div class="scale-row s4 rv" style="--d:.15s"><span class="name">Abber — заводская</span><span class="meta"><b>body</b>сертификация РФ</span></div>
-      <div class="scale-note rv">Кегль пропорционален сроку гарантии. Документы — при покупке.</div>
+    <div class="finale-row">
+      <a class="gpill" href="https://max.ru/+7909412-41-24" target="_blank" rel="noopener">Написать в MAX</a>
+      <a class="maps-link" href="https://yandex.ru/maps/org/vanny_i_kabiny/191562904159/" target="_blank" rel="noopener">Мы на Яндекс Картах ›</a>
     </div>
-  </section>
-
-  <section id="dodont">
-    <div class="wrap">
-      <div class="slabel rv">Guidelines</div>
-      <h2 class="stitle rv" style="--d:.06s">Do / Don't</h2>
-      <div class="dd">
-        <ul class="do rv">
-          <h3>Do — у нас есть</h3>
-          <li>Работаем напрямую с четырьмя заводами — статус официального дилера.</li>
-          <li>Показываем всё вживую: кабины собраны и подключены в зале.</li>
-          <li>Подбираем под ваши габариты и бюджет — сотни собранных санузлов.</li>
-          <li>Называем цену со скидкой дилера по телефону.</li>
-          <li>Рейтинг 4,4 на Яндекс Картах, карточка подтверждена владельцем.</li>
-        </ul>
-        <ul class="dont rv" style="--d:.08s">
-          <h3>Don't — у нас нет</h3>
-          <li>Наценок посредников и маркетплейсов.</li>
-          <li>Подделок: вся продукция оригинальная, с заводской гарантией.</li>
-          <li>Навязчивых продаж — приходите просто посмотреть.</li>
-          <li>Очередей: шоурум просторный, консультант — ваш с порога.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="find">
-    <div class="wrap">
-      <div class="slabel rv">Preview</div>
-      <h2 class="stitle rv" style="--d:.06s">Как нас найти</h2>
-      <div class="prev rv">
-        <div class="map-prev">
-          <iframe title="Ванны и Кабины на карте" loading="lazy"
-            src="https://yandex.ru/map-widget/v1/?ll=39.631934%2C47.258224&mode=search&oid=191562904159&ol=biz&z=17"></iframe>
-        </div>
-        <div class="prev-meta">
-          <span class="prev-ico"><img loading="lazy" decoding="async" src="assets/65c8a49bc2f8.jpg" alt=""></span>
-          <div><b>Таганрогская, 138, корп. 2 · этаж 1</b><span>вход с улицы, дверь под вывеской · остановка «Воинская часть»</span></div>
-        </div>
-      </div>
-      <div class="rate rv">
-        <span class="num">4,4</span>
-        <span class="stars">★★★★<span style="opacity:.35">★</span></span>
-        <p>38 оценок и 19 отзывов на Яндекс Картах.<br>Пн–Пт 9:00–17:00 · Сб–Вс выходной.</p>
-        <a href="https://yandex.ru/maps/org/vanny_i_kabiny/191562904159/" target="_blank" rel="noopener">Читать отзывы</a>
-      </div>
-    </div>
-  </section>
-
+  </div>
   <footer>
     <div class="wrap row">
       <span>© 2026 «Ванны и Кабины» · Ростов-на-Дону</span>
@@ -506,101 +421,112 @@
       </span>
     </div>
   </footer>
-</main>
+</section>
 
-<div class="toast" id="toast"><span class="ok">✓</span>Скопировано</div>
-
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script>
 (function(){
-  /* reveals */
-  var els = document.querySelectorAll('.rv');
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, {threshold:.12, rootMargin:'0px 0px -4% 0px'});
-    els.forEach(function(el){ io.observe(el); });
-  } else {
-    els.forEach(function(el){ el.classList.add('in'); });
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.querySelectorAll('video').forEach(function(v){
+    if (reduced) { v.removeAttribute('autoplay'); v.pause(); return; }
+    v.muted = true;
+    var tryPlay = function(){
+      if (!v.paused) return;
+      var p = v.play(); if (p && p.catch) p.catch(function(){});
+    };
+    tryPlay();
+    v.addEventListener('canplay', tryPlay, { once: true });
+    document.addEventListener('pointerdown', tryPlay, { once: true });
+    document.addEventListener('scroll', tryPlay, { once: true, passive: true });
+  });
+
+  /* split manifest into words (still readable if JS dies) */
+  var m = document.getElementById('manifestText');
+  if (m) {
+    var words = m.textContent.split(' ');
+    m.innerHTML = words.map(function(w){ return '<span class="w">' + w + '</span>'; }).join(' ');
   }
 
-  /* copy buttons */
-  var toast = document.getElementById('toast');
-  var toastTimer;
-  document.querySelectorAll('.copy').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var val = btn.getAttribute('data-copy');
-      var done = function(){
-        btn.classList.add('done'); btn.textContent = '✓';
-        setTimeout(function(){ btn.classList.remove('done'); btn.textContent = 'Copy'; }, 1600);
-        toast.classList.add('show');
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 1800);
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(val).then(done, done);
-      } else {
-        var ta = document.createElement('textarea');
-        ta.value = val; document.body.appendChild(ta);
-        ta.select(); try { document.execCommand('copy'); } catch(e){}
-        document.body.removeChild(ta); done();
+  if (reduced || !window.gsap || !window.ScrollTrigger) {
+    document.querySelectorAll('.manifest .w').forEach(function(s){ s.classList.add('lit'); });
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* пересчёт триггеров после подгрузки ленивых картинок */
+  var __rfT;
+  function __refreshST(){ clearTimeout(__rfT); __rfT = setTimeout(function(){ ScrollTrigger.refresh(); }, 140); }
+  window.addEventListener('load', __refreshST);
+  document.querySelectorAll('img').forEach(function(im){
+    if (!im.complete) im.addEventListener('load', __refreshST, { once: true });
+  });
+
+  if (window.Lenis) {
+    var lenis = new Lenis({ lerp: 0.11 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  /* hero: image settles, copy drifts up and fades */
+  gsap.fromTo('#heroImg', { scale: 1.14, yPercent: 6 }, {
+    scale: 1, yPercent: 0, ease: 'none',
+    scrollTrigger: { trigger: '.hero', start: 'top top', end: '55% bottom', scrub: true }
+  });
+  gsap.to('#heroCopy', {
+    yPercent: -36, autoAlpha: 0, ease: 'none',
+    scrollTrigger: { trigger: '.hero', start: '12% top', end: '52% bottom', scrub: true }
+  });
+
+  /* manifest: words light up as you scroll */
+  var ws = document.querySelectorAll('.manifest .w');
+  gsap.to(ws, {
+    stagger: 0.6, duration: 0.001,
+    onStart: function(){}, ease: 'none',
+    scrollTrigger: {
+      trigger: '.manifest', start: 'top 72%', end: 'bottom 78%', scrub: true,
+      onUpdate: function(st){
+        var n = Math.floor(st.progress * ws.length);
+        ws.forEach(function(s, i){ s.classList.toggle('lit', i <= n); });
       }
+    }
+  });
+
+  /* brand scenes: product breathes in, copy rises */
+  document.querySelectorAll('.scene').forEach(function(sc){
+    var img = sc.querySelector('.scene-img');
+    var body = sc.querySelector('.scene-body');
+    gsap.fromTo(img, { scale: 1.1, autoAlpha: .3 }, {
+      scale: 1, autoAlpha: 1, ease: 'none',
+      scrollTrigger: { trigger: sc, start: 'top 85%', end: '38% center', scrub: true }
+    });
+    gsap.fromTo(body, { y: 60, autoAlpha: 0 }, {
+      y: 0, autoAlpha: 1, ease: 'none',
+      scrollTrigger: { trigger: sc, start: 'top 45%', end: '30% 30%', scrub: true }
+    });
+    gsap.to(img, {
+      autoAlpha: .25, ease: 'none',
+      scrollTrigger: { trigger: sc, start: '78% bottom', end: 'bottom bottom', scrub: true }
     });
   });
 
-  /* live tour previews */
-  var lps = Array.from(document.querySelectorAll('.lp'));
-  function fitFilms(){
-    lps.forEach(function(lp){
-      var film = lp.querySelector('.film');
-      var frame = lp.querySelector('iframe');
-      if (!film || !frame) return;
-      var s = lp.clientWidth / 1200;
-      film.style.transform = 'scale(' + s + ')';
-      frame.style.setProperty('--vh', (lp.clientHeight / s) + 'px');
-    });
-  }
-  fitFilms();
-  window.addEventListener('resize', fitFilms, {passive:true});
-  if ('IntersectionObserver' in window) {
-    var lio = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        var lp = e.target;
-        var frame = lp.querySelector('iframe');
-        if (e.isIntersecting) {
-          if (frame && !frame.src) {
-            frame.src = frame.getAttribute('data-src');
-            frame.addEventListener('load', function(){ lp.classList.add('ready'); }, { once: true });
-            setTimeout(function(){ lp.classList.add('ready'); }, 6000);
-          }
-          lp.classList.add('play');
-        } else {
-          lp.classList.remove('play');
-        }
+  /* white bands + finale: gentle rise */
+  ['.band .wrap', '.finale .narrow'].forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(el){
+      gsap.fromTo(el, { y: 44, autoAlpha: 0 }, {
+        y: 0, autoAlpha: 1, duration: 1, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 82%' }
       });
-    }, { rootMargin: '200px 0px', threshold: 0.05 });
-    lps.forEach(function(lp){ lio.observe(lp); });
-  } else {
-    lps.forEach(function(lp){
-      var frame = lp.querySelector('iframe');
-      if (frame) { frame.src = frame.getAttribute('data-src'); }
-      lp.classList.add('play', 'ready');
     });
-  }
+  });
 
-  /* scrollspy tabs */
-  var tabs = Array.from(document.querySelectorAll('.tab'));
-  var ids = ['top','brands','contacts','scale','dodont','find'];
-  var secs = ids.map(function(id){ return document.getElementById(id); });
-  function spy(){
-    var y = window.scrollY + 160;
-    var cur = 'top';
-    secs.forEach(function(s){ if (s && s.offsetTop <= y) cur = s.id; });
-    tabs.forEach(function(t){ t.classList.toggle('on', t.getAttribute('data-t') === cur); });
-  }
-  window.addEventListener('scroll', spy, {passive:true});
-  spy();
+  /* interlude headline */
+  gsap.fromTo('.inter .inner', { y: 40, autoAlpha: 0 }, {
+    y: 0, autoAlpha: 1, ease: 'none',
+    scrollTrigger: { trigger: '.inter', start: 'top 60%', end: 'center center', scrub: true }
+  });
 })();
 </script>
 
