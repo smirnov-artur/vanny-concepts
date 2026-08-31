@@ -131,8 +131,13 @@
   }
   .scene-img img{width:100%;height:100%;object-fit:cover;object-position:center}
   .scene-sticky::after{
-    content:"";position:absolute;left:0;right:0;bottom:0;height:42%;
-    background:linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0));
+    content:"";position:absolute;left:0;right:0;bottom:0;height:52%;
+    background:linear-gradient(to top,
+      rgba(0,0,0,.74) 0%,
+      rgba(0,0,0,.44) 9%,
+      rgba(0,0,0,.15) 24%,
+      rgba(0,0,0,.04) 42%,
+      rgba(0,0,0,0) 100%);
     pointer-events:none;z-index:1;
   }
   .scene-body{
@@ -498,17 +503,13 @@
   document.querySelectorAll('.scene').forEach(function(sc){
     var img = sc.querySelector('.scene-img');
     var body = sc.querySelector('.scene-body');
-    gsap.fromTo(img, { scale: 1.1, autoAlpha: .3 }, {
+    gsap.fromTo(img, { scale: 1.1, autoAlpha: .82 }, {
       scale: 1, autoAlpha: 1, ease: 'none',
-      scrollTrigger: { trigger: sc, start: 'top 85%', end: '38% center', scrub: true }
+      scrollTrigger: { trigger: sc, start: 'top 85%', end: '30% center', scrub: true }
     });
     gsap.fromTo(body, { y: 60, autoAlpha: 0 }, {
       y: 0, autoAlpha: 1, ease: 'none',
       scrollTrigger: { trigger: sc, start: 'top 45%', end: '30% 30%', scrub: true }
-    });
-    gsap.to(img, {
-      autoAlpha: .25, ease: 'none',
-      scrollTrigger: { trigger: sc, start: '78% bottom', end: 'bottom bottom', scrub: true }
     });
   });
 
