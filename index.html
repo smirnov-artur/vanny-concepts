@@ -268,6 +268,52 @@
     .qr img{width:150px;height:150px}
     .qr .cap{max-width:150px}
   }
+
+  /* ---------- телефон: своя раскладка, а не сжатый десктоп ---------- */
+  @media(max-width:760px){
+    /* капсула уезжает вниз, чтобы не накрывать заголовки при прокрутке */
+    .nav{top:auto;bottom:calc(14px + env(safe-area-inset-bottom))}
+
+    /* герой: видео на весь экран, текст поверх */
+    .hero{height:150vh}
+    .hero-sticky{justify-content:center}
+    .hero-copy{padding-top:0;padding-bottom:22vh;padding-left:20px;padding-right:20px}
+    .hero-img{
+      left:0;right:0;top:0;bottom:0;transform:none;
+      width:100%;height:100%;z-index:0;
+    }
+    .hero-img img,.hero-img video{width:100%;height:100%;object-fit:cover}
+    .hero-sticky::after{
+      content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+      background:linear-gradient(to bottom, rgba(0,0,0,.82) 0%, rgba(0,0,0,.45) 34%, rgba(0,0,0,.25) 58%, rgba(0,0,0,.6) 100%);
+    }
+    .hero-chip{bottom:18px;right:50%;transform:translateX(50%)}
+
+    /* сцены брендов: короче прокрутка, товар не срезан, текст читается на любом фоне */
+    .scene{height:125vh}
+    .scene-img img{object-position:center 42%}
+    .scene-sticky::after{
+      height:70%;
+      background:linear-gradient(to top,
+        rgba(0,0,0,.88) 0%,
+        rgba(0,0,0,.7) 18%,
+        rgba(0,0,0,.4) 38%,
+        rgba(0,0,0,.12) 62%,
+        rgba(0,0,0,0) 100%);
+    }
+    .scene-copy h2{text-shadow:0 2px 24px rgba(0,0,0,.75)}
+    .scene-copy p{color:#e8e8ed;text-shadow:0 1px 16px rgba(0,0,0,.8)}
+    /* запас снизу под плавающую капсулу, чтобы она ничего не накрывала */
+    .scene-body{padding-bottom:120px}
+    .hero-chip{bottom:78px}
+
+    /* меньше пустоты между блоками */
+    .manifest{padding:12vh 0}
+    .band{padding:78px 0}
+    .finale{padding:96px 0 40px}
+    .inter{height:78vh}
+    footer{margin-top:64px;padding-bottom:calc(86px + env(safe-area-inset-bottom))}
+  }
   footer{
     margin-top:100px;padding:28px 0;border-top:1px solid var(--carbon);
     font-size:12px;line-height:1.33;color:var(--ash);
@@ -497,7 +543,9 @@
   }
 
   /* hero: image settles, copy drifts up and fades */
-  gsap.fromTo('#heroImg', { scale: 1.14, yPercent: 6 }, {
+  /* на телефоне кадр растянут на весь экран, поэтому сдвиг по вертикали убран — он оголял края */
+  var narrow = window.matchMedia('(max-width: 760px)').matches;
+  gsap.fromTo('#heroImg', { scale: narrow ? 1.08 : 1.14, yPercent: narrow ? 0 : 6 }, {
     scale: 1, yPercent: 0, ease: 'none',
     scrollTrigger: { trigger: '.hero', start: 'top top', end: '55% bottom', scrub: true }
   });
